@@ -5,11 +5,8 @@
 (ns offline-4clojure.p13
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def expected-rest [20 30 40])
 
-(defn -main []
-  (are [soln] soln
-(= __ (rest [10 20 30 40]))
-))
+(testing "rest"
+  (is
+   (= expected-rest (rest [10 20 30 40]))))

@@ -5,13 +5,9 @@
 (ns offline-4clojure.p16
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(defn greet [name] (str "Hello, " name "!"))
 
-(defn -main []
-  (are [soln] soln
-(= (__ "Dave") "Hello, Dave!")
-(= (__ "Jenn") "Hello, Jenn!")
-(= (__ "Rhea") "Hello, Rhea!")
-))
+(testing "greet"
+  (is (= (greet "Dave") "Hello, Dave!"))
+  (is (= (greet "Jenn") "Hello, Jenn!"))
+  (is (= (greet "Rhea") "Hello, Rhea!")))

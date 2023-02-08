@@ -5,13 +5,13 @@
 (ns offline-4clojure.p19
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(defn last-element [seq]
+  (if-not (empty? seq)
+    (if (= 1 (count seq))
+      (first seq)
+      (last (rest seq)))))
 
-(defn -main []
-  (are [soln] soln
-(= (__ [1 2 3 4 5]) 5)
-(= (__ '(5 4 3)) 3)
-(= (__ ["b" "c" "d"]) "d")
-))
+(testing "last element of seq"
+  (is (= (last-element [1 2 3 4 5]) 5))
+  (is (= (last-element '(5 4 3)) 3))
+  (is (= (last-element ["b" "c" "d"]) "d")))

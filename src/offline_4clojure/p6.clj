@@ -5,11 +5,13 @@
 (ns offline-4clojure.p6
   (:use clojure.test))
 
-(def __
+(def vector-abs [:a :b :c]
 ;; your solution here
-)
+  )
 
-(defn -main []
-  (are [soln] soln
-(= [__] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c))
-))
+(testing "Vector"
+  (is (=
+       vector-abs
+       (list :a :b :c)
+       (vec '(:a :b :c))
+       (vector :a :b :c))))

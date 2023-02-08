@@ -3,14 +3,11 @@
 ;; tags - 
 ;; restricted - 
 (ns offline-4clojure.p8
-  (:use clojure.test))
+  (:use clojure.test)
+  (:require [clojure.set :as set]))
 
-(def __
-;; your solution here
-)
+(def expected-set #{:a :b :c :d})
 
-(defn -main []
-  (are [soln] soln
-(= __ (set '(:a :a :b :c :c :c :c :d :d)))
-(= __ (clojure.set/union #{:a :b :c} #{:b :c :d}))
-))
+(testing "Set"
+  (is (= expected-set (set '(:a :a :b :c :c :c :c :d :d))))
+  (is (= expected-set (set/union #{:a :b :c} #{:b :c :d}))))

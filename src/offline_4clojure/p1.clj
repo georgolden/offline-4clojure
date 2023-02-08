@@ -5,11 +5,9 @@
 (ns offline-4clojure.p1
   (:use clojure.test))
 
-(def __
+(def truth true
 ;; your solution here
-)
+  )
 
-(defn -main []
-  (are [soln] soln
-(= __ true)
-))
+(testing "Truth"
+  (is (= truth true)))

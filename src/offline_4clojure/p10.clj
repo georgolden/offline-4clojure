@@ -5,12 +5,8 @@
 (ns offline-4clojure.p10
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def b 20)
 
-(defn -main []
-  (are [soln] soln
-(= __ ((hash-map :a 10, :b 20, :c 30) :b))
-(= __ (:b {:a 10, :b 20, :c 30}))
-))
+(testing "hash-map get"
+  (is (= b ((hash-map :a 10, :b 20, :c 30) :b)))
+  (is (= b (:b {:a 10, :b 20, :c 30}))))

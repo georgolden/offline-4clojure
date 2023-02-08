@@ -5,11 +5,8 @@
 (ns offline-4clojure.p11
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def b {:b 2})
 
-(defn -main []
-  (are [soln] soln
-(= {:a 1, :b 2, :c 3} (conj {:a 1} __ [:c 3]))
-))
+(testing "hash-map conj"
+  (is
+   (= {:a 1, :b 2, :c 3} (conj {:a 1} b [:c 3]))))

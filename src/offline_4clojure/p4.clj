@@ -5,11 +5,12 @@
 (ns offline-4clojure.p4
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def vec-abc [:a :b :c])
+(def a :a)
+(def b :b)
+(def c :c)
 
-(defn -main []
-  (are [soln] soln
-(= (list __) '(:a :b :c))
-))
+(testing "List check"
+  (is (= (lazy-seq vec-abc) '(:a :b :c)))
+  (is (= (list a b c) '(:a :b :c)))
+  )
